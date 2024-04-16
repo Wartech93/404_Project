@@ -1,0 +1,184 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    color: gold;
+    background-color: black;
+    opacity: 80%;
+    padding: 40px;
+    font-size: 100px;
+    font-family: fantasy, sans-serif;
+    border: 5px solid red;
+    margin-bottom: 40px;
+    margin-right: 25px;
+}
+
+h2 {
+
+    font-size: 40px;
+    color: gold;
+    margin-left: 40px;
+    font-family: fantasy;
+}
+
+.column-left {
+
+    display: flex;
+    flex-direction: row;
+    border: 5px red solid;
+    margin-right: 2180px;
+    background-color: black;
+    opacity: 80%;
+}
+
+button {
+
+    width: 200px;
+    height: 50px;
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: 80px;
+    margin-top: 30px;
+    font-family: fantasy, sans-serif;
+    font-size: 20px;
+}
+
+input {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    border: 1px solid white;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.column-search {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 1000px;
+
+}
+
+.column-classes {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 1000px;
+    margin-right: 200px;
+}
+
+.column-middle {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    width: 75%;
+    border: solid 2px;
+    color: red;
+}
+
+
+.spellContainer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.column-right {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    border: 5px red solid;
+    background-color: black;
+    opacity: 80%;
+    margin-top: -1000px;
+    margin-right: 20px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/dragon.jpg');
+    background-size: cover;
+}
+
+
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 5px solid red;
+    height: 990px;
+    width: 1500px;
+    margin-left: 20%;
+    margin-top: -1000px;
+    opacity: 80%;
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-size: 20px;
+    font-family: fantasy, sans-serif;
+    color: white;
+    padding-top: 50px;
+    margin-left: -25px;
+    margin-top: -50px;
+    border: 2px solid red;
+}
+
+img {
+
+    display: flex;
+    justify-content: start;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
+}
+
+.footer-image {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100px;
+    margin-top: -30px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: end;
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+}
+
+li {
+
+    font-size: 30px;
+    display: inline;
+    display: block;
+    color: white;
+    text-align: end;
+    padding: 0 16px;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+li a:hover {
+    background-color: rgb(156, 2, 2);
+}
+
+body {
+    overflow-x: hidden;
+}
