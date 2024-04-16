@@ -17,7 +17,7 @@ h2 {
     font-size: 40px;
     color: gold;
     margin-left: 40px;
-    font-family: fantasy;
+    font-family: fantasy, sans-serif;
 }
 
 .column-left {
