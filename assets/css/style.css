@@ -6,7 +6,7 @@
     opacity: 80%;
     padding: 40px;
     font-size: 100px;
-    font-family: fantasy;
+    font-family: fantasy, sans-serif;
     border: 5px solid red;
     margin-bottom: 40px;
     margin-right: 25px;
@@ -38,7 +38,7 @@ button {
     border: 1px solid rgb(0, 0, 0);
     margin-left: 80px;
     margin-top: 30px;
-    font-family: fantasy;
+    font-family: fantasy, sans-serif;
     font-size: 20px;
 }
 
@@ -103,7 +103,7 @@ input {
 body {
     width: 100vw;
     height: 100vh;
-    background: url('/assets/images/dragon.jpg');
+    background: url('../images/dragon.jpg');
     background-size: cover;
 }
 
@@ -129,7 +129,7 @@ footer {
     align-items: center;
     background-color: black;
     font-size: 20px;
-    font-family: fantasy;
+    font-family: fantasy, sans-serif;
     color: white;
     padding-top: 50px;
     margin-left: -25px;
