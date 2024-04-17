@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    
+
     <title>Spell Compendium</title>
 </head>
 
@@ -24,18 +24,28 @@
 
 
 
-    <section class="column-left">
-        <div class="column-search">
-            <h2>Search Spell: </h2>
+    <section class="row column-left">
+        <div class="col column-search">
+            
             <div class="search-wrapper">
-                <input type="text" id="search-name" placeholder="Search Spell"><br>
-                <button for="search" id="search">Search </button>
+            <form>
+                <label for ="search-name">Enter a spell:</label>
+                <input class="white-text" type="text" id="search-name" placeholder="Search Spell"><br>
+            </form>
+                <button for="search" id="search-button">Search </button>
                 <div id="results"></div>
             </div>
         </div>
     </section>
+    <div class="col column-center" >
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card-panel black "></div>
+            </div>
+        </div>
+    </section>
 
-    <section class="column-right">
+    <section class="col column-right">
         <div class="column-classes">
             <h2>Classes:</h2>
             <div class="search-wrapper">
@@ -43,9 +53,9 @@
         </div>
     </section>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="item"></div>
-    </div>
+    </div> -->
 
     <footer>
         <p>Copyright © 1974 - 2024 Dungeons & Dragons<br>
