@@ -18,19 +18,19 @@ const formSubmitHandler = function (event) {
     const searchInputValue = searchInput.value.trim();
     const spell = capitalizeFirstLetter(searchInputValue);
     if (spell) {
-        spellSearch(spell); 
+        spellSearch(spell);
         savedSpells();
-       // console.log("IM RUNNING");              
-         } else {
-        alert('Please enter a spell name');
+    } else {
+        alert('Please enter a spell name that exists');
     }
 }
 //spell history array handler
 const spellHistoryArrayHandler = function (spells) {
+    //get the stored spells add new array of spell to spell history
     let spellHistory = JSON.parse(localStorage.getItem('spells')) || [];
-
+//added to stored spells
     spellHistory.push(spells);
-
+//store new spells 
     localStorage.setItem('spellHistory', JSON.stringify(spellHistory));
 }
 
@@ -67,20 +67,23 @@ const spellSearch = function () {
     fetch(queryURL)
         .then(function (response) {
             if (response.ok) {
-               
-                
-                spellHistoryArrayHandler();
-                console.log(spells);
-            response.json();
-            
+
+
+              
+                return response.json();
+
             } else {
+                alert(`Error: ${response.statusText}`)
                 throw Error('Network response was not ok.');
             }
         })
-        .then(function (data) {
-            
-           //past spell array handler
-            localStorage.setItem('spellData', JSON.stringify(spells));
+        .then(function (spells) {
+            console.log(spells.results);
+            const results = spells.results
+            spellHistoryArrayHandler(results);
+
+           
+           // localStorage.setItem('spellData', JSON.stringify(spells));
         })
         .catch(function (error) {
             console.error('There was a problem with the fetch operation:', error);
@@ -127,57 +130,56 @@ const displaySpellHistory = function (spellHistory) {
 
 
 //display added spells for spell list on card when selected
-const displaySpells = function (data) {
-    for (let i = 0; i <= 1; i++) {
-    //create div for card
-    const spellCard = document.createElement('div');
-    spellCard.setAttribute('class', ('card-panel') )
+const displaySpells = function () {
+            //create div for card
+        const spellCard = document.createElement('div');
+        spellCard.setAttribute('class', ('card-panel'))
 
-    const spellName = document.createElement('h3');
-    const spellRange = document.createElement('h4')
-    const spellComps = document.createElement('h4');
-    const spellMat = document.createElement('h4');
-    const spellDura = document.createElement('h4');
-    const spellConc = document.createElement('h4');
-    const spellCastTime = document.createElement('h4');
-    const level = document.createElement('h4');
-    const spellLevel = document.createElement('h4');
-    const spellSchool= document.createElement('h4');
-    const dndClass = document.createElement('h4');
-    const description = document.createElement('h5');
-    const higherLevel = document.createElement('h5');
+        const spellName = document.createElement('h3');
+        const spellRange = document.createElement('h4')
+        const spellComps = document.createElement('h4');
+        const spellMat = document.createElement('h4');
+        const spellDura = document.createElement('h4');
+        const spellConc = document.createElement('h4');
+        const spellCastTime = document.createElement('h4');
+        const level = document.createElement('h4');
+        const spellLevel = document.createElement('h4');
+        const spellSchool = document.createElement('h4');
+        const dndClass = document.createElement('h4');
+        const description = document.createElement('h5');
+        const higherLevel = document.createElement('h5');
 
-spellName.textContent = `SpellName: ${results.name}`;
-spellRange.textContent = `Range: ${results.range}`;
-spellComps.textContent = `Components: ${results.components}`;
-spellMat.textContent = `Material: ${results.material}`;
-spellDura.textContent = `Duration: ${results.duration}`;
-spellConc.textContent = `Concentration: ${results.concentration}`;
-spellCastTime.textContent = `Cast Time: ${results.casting_time}`;
-level.textContent = `Level: ${results.level}`;
-spellLevel.textContent = `Spell Level: ${results.spell_level}`;
-spellSchool.textContent = `School: ${results.school}`;
-dndClass.textContent = `Class: ${results.dnd_class}`;
-description.textContent = `Description: ${results.desc}`;
-higherLevel.textContent = `Higher Level: ${results.higher_level}`;
+        spellName.textContent = `SpellName: ${results.name}`;
+        spellRange.textContent = `Range: ${results.range}`;
+        spellComps.textContent = `Components: ${results.components}`;
+        spellMat.textContent = `Material: ${results.material}`;
+        spellDura.textContent = `Duration: ${results.duration}`;
+        spellConc.textContent = `Concentration: ${results.concentration}`;
+        spellCastTime.textContent = `Cast Time: ${results.casting_time}`;
+        level.textContent = `Level: ${results.level}`;
+        spellLevel.textContent = `Spell Level: ${results.spell_level}`;
+        spellSchool.textContent = `School: ${results.school}`;
+        dndClass.textContent = `Class: ${results.dnd_class}`;
+        description.textContent = `Description: ${results.desc}`;
+        higherLevel.textContent = `Higher Level: ${results.higher_level}`;
 
-spellCard.appendChild(spellName);
-spellCard.appendChild(spellRange);
-spellCard.appendChild(spellComps);
-spellCard.appendChild(spellMat);
-spellCard.appendChild(spellDura);
-spellCard.appendChild(spellConc);
-spellCard.appendChild(spellCastTime);
-spellCard.appendChild(level);
-spellCard.appendChild(spellLevel);
-spellCard.appendChild(spellSchool);
-spellCard.appendChild(dndClass);
-spellCard.appendChild(description);
-spellCard.appendChild(higherLevel);
+        spellCard.appendChild(spellName);
+        spellCard.appendChild(spellRange);
+        spellCard.appendChild(spellComps);
+        spellCard.appendChild(spellMat);
+        spellCard.appendChild(spellDura);
+        spellCard.appendChild(spellConc);
+        spellCard.appendChild(spellCastTime);
+        spellCard.appendChild(level);
+        spellCard.appendChild(spellLevel);
+        spellCard.appendChild(spellSchool);
+        spellCard.appendChild(dndClass);
+        spellCard.appendChild(description);
+        spellCard.appendChild(higherLevel);
 
-spellElement.appendChild(spellCard);
+        spellElement.appendChild(spellCard);
 
-}
+    
 }
 //event listener for add button for spells
 
@@ -197,5 +199,5 @@ function capitalizeFirstLetter(spell) {
     return spell.charAt(0).toUpperCase() + spell.slice(1);
 }
 const clearDiv = function () {
-    searchInput.innerHTML = ''
+    searchInput.value.innerHTML = ''
 }
