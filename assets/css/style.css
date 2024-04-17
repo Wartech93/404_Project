@@ -9,7 +9,7 @@
     font-family: fantasy, sans-serif;
     border: 5px solid red;
     margin-bottom: 40px;
-    margin-right: 25px;
+
 }
 
 h2 {
@@ -17,27 +17,28 @@ h2 {
     font-size: 40px;
     color: gold;
     margin-left: 40px;
-    font-family: fantasy, sans-serif;
+    font-family: fantasy;
 }
 
-.column-left {
+#column-left {
 
     display: flex;
     flex-direction: row;
     border: 5px red solid;
-    margin-right: 2180px;
+    height: 850px;
+    /* margin-right: 2180px; */
     background-color: black;
     opacity: 80%;
 }
 
 button {
 
-    width: 200px;
-    height: 50px;
+    /* width: 200px;
+    height: 50px; */
     color: black;
     border: 1px solid rgb(0, 0, 0);
-    margin-left: 80px;
-    margin-top: 30px;
+    /* margin-left: 80px;
+    margin-top: 30px; */
     font-family: fantasy, sans-serif;
     font-size: 20px;
 }
@@ -55,6 +56,7 @@ input {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+
     align-items: flex-start;
     height: 1000px; }
     
@@ -62,12 +64,19 @@ input {
 
 
 
-.column-classes {
+    /* align-items: flex-start; */
+    height: 1000px;
 
-    display: flex;
+
+}
+
+
+#column-classes {
+
+    /* display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: flex-start; */
     height: 1000px;
     margin-right: 200px;
 }
@@ -91,36 +100,34 @@ input {
 
 
 
-.column-right {
+#column-right {
     display: flex;
     position: absolute;
+    height: 850px;
     right: 0px;
     border: 5px red solid;
     background-color: black;
     opacity: 80%;
-    margin-top: -1000px;
-    margin-right: 20px;
+
+
+
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     background: url('../images/dragon.jpg');
     background-size: cover;
+    overflow-x: hidden;
 }
 
 
-.container {
-    height: 200px;
+#center-box {
+    height: 850px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: black;
     border: 5px solid red;
-    height: 990px;
-    width: 1500px;
-    margin-left: 20%;
-    margin-top: -1000px;
     opacity: 80%;
 
 }
@@ -133,10 +140,9 @@ footer {
     font-size: 20px;
     font-family: fantasy, sans-serif;
     color: white;
-    padding-top: 50px;
-    margin-left: -25px;
-    margin-top: -50px;
     border: 2px solid red;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 img {
@@ -181,6 +187,34 @@ li a:hover {
     background-color: rgb(156, 2, 2);
 }
 
-body {
-    overflow-x: hidden;
+#search {
+
+    align-items: center;
+}
+
+#classes-button {
+
+    display: flex;
+    position: relative;
+    padding-top: 150px;
+    padding-right: 200px;
+
+
+}
+
+/* .row .sol.s1 {
+
+    width: 70%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+} */
+
+#btn-margin {
+
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    width: 90px;
+
 }
