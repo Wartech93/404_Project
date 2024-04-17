@@ -108,7 +108,6 @@ const displaySpellHistory = function () {
     })
 }
 
-
 //display added spells for spell list on card when selected
 const displaySpells = function () {
             //create div for card
@@ -180,4 +179,4 @@ function capitalizeFirstLetter(spell) {
 }
 const clearDiv = function () {
     searchInput.value.innerHTML = ''
-}
+
