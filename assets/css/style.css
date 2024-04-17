@@ -17,7 +17,7 @@ h2 {
     font-size: 40px;
     color: gold;
     margin-left: 40px;
-    font-family: fantasy, sans-serif;
+    font-family: fantasy;
 }
 
 #column-left {
@@ -33,12 +33,12 @@ h2 {
 
 button {
 
-    width: 200px;
-    height: 50px;
+    /* width: 200px;
+    height: 50px; */
     color: black;
     border: 1px solid rgb(0, 0, 0);
-    margin-left: 80px;
-    margin-top: 30px;
+    /* margin-left: 80px;
+    margin-top: 30px; */
     font-family: fantasy, sans-serif;
     font-size: 20px;
 }
@@ -62,12 +62,12 @@ input {
 
 }
 
-.column-classes {
+#column-classes {
 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: flex-start; */
     height: 1000px;
     margin-right: 200px;
 }
@@ -99,7 +99,7 @@ input {
     border: 5px red solid;
     background-color: black;
     opacity: 80%;
-    
+
 
 
 }
@@ -178,14 +178,9 @@ li a:hover {
     background-color: rgb(156, 2, 2);
 }
 
-/* . {
-
-    display: flex;
-   flex-direction:column ;
-
-} */
-
 #search {
 
     align-items: center;
 }
+
+#classes-button {}
