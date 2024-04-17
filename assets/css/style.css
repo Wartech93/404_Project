@@ -192,4 +192,29 @@ li a:hover {
     align-items: center;
 }
 
-#classes-button {}
+#classes-button {
+
+    display: flex;
+    position: relative;
+    padding-top: 150px;
+    padding-right: 200px;
+
+
+}
+
+/* .row .sol.s1 {
+
+    width: 70%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+} */
+
+#btn-margin {
+
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    width: 90px;
+
+}
