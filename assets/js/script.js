@@ -1,6 +1,5 @@
 //global variables
 const searchInput = document.querySelector("#search-name");
-const searchInputBtn = document.querySelector("#search");
 const searchBtn = document.querySelector("#search-button");
 const spellElement = document.querySelector(".column-center")
 
@@ -109,7 +108,6 @@ const displaySpellHistory = function () {
     })
 }
 
-
 //display added spells for spell list on card when selected
 const displaySpells = function () {
             //create div for card
@@ -181,4 +179,4 @@ function capitalizeFirstLetter(spell) {
 }
 const clearDiv = function () {
     searchInput.value.innerHTML = ''
-}
+

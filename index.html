@@ -53,10 +53,15 @@
     <section class="row">
         <div class="col s3" id="column-left">
             <div class="column-search">
-                <h2 class="center-align">Search Spell: </h2>
                 <div class="search-wrapper">
-                    <input type="text" id="search" placeholder="Search Spell"><br>
-                    <!-- <button id="search-button">Search </button> -->
+                    <form>
+                        <label for="search" class="center-align white-text">Search Spell</label>
+                        <input type="text" id="search" placeholder="Search"><br>
+                    </form>
+                    <button class="btn waves-effect waves-light red darken-2" type="submit" name="action"
+                        id="search-button">Submit
+                        <i class="material-icons right"></i>
+                    </button>
 
                     <div id="results"></div>
                 </div>
@@ -74,21 +79,21 @@
             </div>
             <div class="row" id="classes-button">
                 <div class="col s1">
-                    <button id="btn-margin">Bard</button>
-                    <button id="btn-margin">Cleric</button>
-                    <button id="btn-margin">Druid</button>
+                    <button class="btn-margin red darken-2" id="bard">Bard</button>
+                    <button class="btn-margin red darken-2" id="cleric">Cleric</button>
+                    <button class="btn-margin red darken-2" id="druid">Druid</button>
                 </div>
 
                 <div class="col s1">
-                    <button id="btn-margin">Monk</button>
-                    <button id="btn-margin">Paladin</button>
-                    <button id="btn-margin">Ranger</button>
+                    <button class="btn-margin red darken-2" id="monk">Monk</button>
+                    <button class="btn-margin red darken-2" id="paladin">Paladin</button>
+                    <button class="btn-margin red darken-2" id="ranger">Ranger</button>
                 </div>
 
                 <div class="col s1">
-                    <button id="btn-margin">Sorcerer</button>
-                    <button id="btn-margin">Warlock</button>
-                    <button id="btn-margin">Wizard</button>
+                    <button class="btn-margin red darken-2" id="sorcerer">Sorcerer</button>
+                    <button class="btn-margin red darken-2" id="warlock">Warlock</button>
+                    <button class="btn-margin red darken-2" id="wizard">Wizard</button>
                 </div>
 
 
