@@ -1,8 +1,7 @@
 //global variables
 const searchInput = document.querySelector("#search-name");
-const searchInputBtn = document.querySelector("#search");
 const searchBtn = document.querySelector("#search-button");
-const spellElement = document.querySelector(".column-center")
+const spellElement = document.querySelector(".column-center");
 
 
 
@@ -15,6 +14,7 @@ const formSubmitHandler = function (event) {
 
     const searchInputValue = searchInput.value.trim();
     const val = searchInputValue.replace(/\s+/g, '-').toLowerCase();
+
     //console.log(val);
     if (val) {
         spellSearch(val);
@@ -22,9 +22,11 @@ const formSubmitHandler = function (event) {
         alert('Please enter a spell name that exists');
     }
 }
+//
+
 //spell history array handler
 const spellHistoryArrayHandler = function (spells) {
-
+    console.log(spells);
 //added to stored spells
     spellHistory.push(spells[0]);
 //store new spells 
@@ -67,12 +69,13 @@ const spellSearch = function (term) {
             if (response.ok) {              
                 return response.json();
             } else {
-                alert(`Error: ${response.statusText}`)
-                throw Error('Network response was not ok.');
+                alert(`Error: ${response.statusText}`);                
             }
         })
-        .then(function (spells) {           
-            const results = spells.results
+        .then(function (spells) {     
+                 
+            const results = spells.results;
+            
             spellHistoryArrayHandler(results);      
         })
         .catch(function (error) {
@@ -91,58 +94,65 @@ searchBtn.addEventListener('click', formSubmitHandler);
 //display spell to history
 const displaySpellHistory = function () {
     const pastSpellContainer = document.querySelector("#results");
-    pastSpellContainer.innerHTML = "";
-    spellHistory.forEach(spell => {
-        console.log(spell);
-        const spellNameButton = document.createElement("button");
-        spellNameButton.textContent = spell.name;
+    localStorage.setItem('spells', JSON.stringify(spellHistory));
+    //pastSpellContainer.innerHTML = "";
+   // console.log(spellHistory);
+    spellHistory.forEach(spells => {         
+      //  console.log(spells);     
+        const spellNameButton = document.createElement("button");       
+        spellNameButton.textContent = spells.name;  
         spellNameButton.setAttribute('class', 'waves-effect waves-light btn-small');
-        spellNameButton.classList.add("past");
+        spellNameButton.classList.add('past');
         pastSpellContainer.appendChild(spellNameButton);
 
         spellNameButton.addEventListener('click', (event) => {
             event.preventDefault();
-            let pastSpell = spellNameButton.textContent;
-            spellSearch(pastSpell);
-            clearDiv()
+            //get the value off of the button
+           // let pastSpells  = spellNameButton.textContent;
+            displaySpells(spells);
+            //check that value is good
+          //  console.log(pastSpell);          
+            //pass that value to spellSearch
+            clearDiv();
         })
     })
 }
 
 
 //display added spells for spell list on card when selected
-const displaySpells = function () {
+const displaySpells = function (spells) {
+    console.log(spells);
             //create div for card
         const spellCard = document.createElement('div');
-        spellCard.setAttribute('class', ('card-panel'))
+        spellCard.setAttribute('class', ('card-panel'));
 
         const spellName = document.createElement('h3');
-        const spellRange = document.createElement('h4')
-        const spellComps = document.createElement('h4');
-        const spellMat = document.createElement('h4');
-        const spellDura = document.createElement('h4');
-        const spellConc = document.createElement('h4');
-        const spellCastTime = document.createElement('h4');
-        const level = document.createElement('h4');
-        const spellLevel = document.createElement('h4');
-        const spellSchool = document.createElement('h4');
-        const dndClass = document.createElement('h4');
-        const description = document.createElement('h5');
-        const higherLevel = document.createElement('h5');
+        const spellRange = document.createElement('p');
+        const spellComps = document.createElement('p');
+        const spellMat = document.createElement('p');
+        const spellDura = document.createElement('p');
+        const spellConc = document.createElement('p');
+        const spellCastTime = document.createElement('p');
+        const level = document.createElement('p');
+        const spellLevel = document.createElement('p');
+        const spellSchool = document.createElement('p');
+        const dndClass = document.createElement('p');
+        const description = document.createElement('p');
+        const higherLevel = document.createElement('p');
 
-        spellName.textContent = `SpellName: ${capitalizeFirstLetter(results.name)}` ;       
-        spellRange.textContent = `Range: ${results.range}`;
-        spellComps.textContent = `Components: ${results.components}`;
-        spellMat.textContent = `Material: ${results.material}`;
-        spellDura.textContent = `Duration: ${results.duration}`;
-        spellConc.textContent = `Concentration: ${results.concentration}`;
-        spellCastTime.textContent = `Cast Time: ${results.casting_time}`;
-        level.textContent = `Level: ${results.level}`;
-        spellLevel.textContent = `Spell Level: ${results.spell_level}`;
-        spellSchool.textContent = `School: ${results.school}`;
-        dndClass.textContent = `Class: ${results.dnd_class}`;
-        description.textContent = `Description: ${results.desc}`;
-        higherLevel.textContent = `Higher Level: ${results.higher_level}`;
+        spellName.textContent = `SpellName: ${(spells.name)}` ;       
+        spellRange.textContent = `Range: ${spells.range}`;
+        spellComps.textContent = `Components: ${spells.components}`;
+        spellMat.textContent = `Material: ${spells.material}`;
+        spellDura.textContent = `Duration: ${spells.duration}`;
+        spellConc.textContent = `Concentration: ${spells.concentration}`;
+        spellCastTime.textContent = `Cast Time: ${spells.casting_time}`;
+        level.textContent = `Level: ${spells.level}`;
+        spellLevel.textContent = `Spell Level: ${spells.spell_level}`;
+        spellSchool.textContent = `School: ${spells.school}`;
+        dndClass.textContent = `Class: ${spells.dnd_class}`;
+        description.textContent = `Description: ${spells.desc}`;
+        higherLevel.textContent = `Higher Level: ${spells.higher_level}`;
 
         spellCard.appendChild(spellName);
         spellCard.appendChild(spellRange);
@@ -159,7 +169,6 @@ const displaySpells = function () {
         spellCard.appendChild(higherLevel);
 
         spellElement.appendChild(spellCard);
-
     
 }
 //event listener for add button for spells
