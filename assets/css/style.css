@@ -210,11 +210,13 @@ li a:hover {
     right: auto;
 } */
 
-#btn-margin {
+.btn-margin {
 
     display: flex;
     justify-content: space-around;
     height: 30px;
     width: 90px;
+    margin-top: 20px;
+    padding-top: 5px;
 
 }

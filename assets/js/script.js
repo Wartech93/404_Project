@@ -84,8 +84,65 @@ const displaySpellHistory = function () {
     })
 }
 
+
+//display added spells for spell list on card when selected
+const displaySpells = function (spells) {
+    console.log(spells);
+            //create div for card
+        const spellCard = document.createElement('div');
+        spellCard.setAttribute('class', ('card-panel'));
+
+        const spellName = document.createElement('h3');
+        const spellRange = document.createElement('p');
+        const spellComps = document.createElement('p');
+        const spellMat = document.createElement('p');
+        const spellDura = document.createElement('p');
+        const spellConc = document.createElement('p');
+        const spellCastTime = document.createElement('p');
+        const level = document.createElement('p');
+        const spellLevel = document.createElement('p');
+        const spellSchool = document.createElement('p');
+        const dndClass = document.createElement('p');
+        const description = document.createElement('p');
+        const higherLevel = document.createElement('p');
+
+        spellName.textContent = `SpellName: ${(spells.name)}` ;       
+        spellRange.textContent = `Range: ${spells.range}`;
+        spellComps.textContent = `Components: ${spells.components}`;
+        spellMat.textContent = `Material: ${spells.material}`;
+        spellDura.textContent = `Duration: ${spells.duration}`;
+        spellConc.textContent = `Concentration: ${spells.concentration}`;
+        spellCastTime.textContent = `Cast Time: ${spells.casting_time}`;
+        level.textContent = `Level: ${spells.level}`;
+        spellLevel.textContent = `Spell Level: ${spells.spell_level}`;
+        spellSchool.textContent = `School: ${spells.school}`;
+        dndClass.textContent = `Class: ${spells.dnd_class}`;
+        description.textContent = `Description: ${spells.desc}`;
+        higherLevel.textContent = `Higher Level: ${spells.higher_level}`;
+
+        spellCard.appendChild(spellName);
+        spellCard.appendChild(spellRange);
+        spellCard.appendChild(spellComps);
+        spellCard.appendChild(spellMat);
+        spellCard.appendChild(spellDura);
+        spellCard.appendChild(spellConc);
+        spellCard.appendChild(spellCastTime);
+        spellCard.appendChild(level);
+        spellCard.appendChild(spellLevel);
+        spellCard.appendChild(spellSchool);
+        spellCard.appendChild(dndClass);
+        spellCard.appendChild(description);
+        spellCard.appendChild(higherLevel);
+
+        spellElement.appendChild(spellCard);
+    
+}
+//event listener for add button for spells
+
+
 //function to delete cards in spell list area
 const clearDiv = function () {
     searchInput.value.innerHTML = '';
 }
+
 
