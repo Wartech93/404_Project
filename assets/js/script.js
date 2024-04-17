@@ -5,10 +5,8 @@ const searchBtn = document.querySelector("#search-button");
 const spellElement = document.querySelector(".column-center")
 
 
-let allSpells = JSON.parse(localStorage.getItem('spellList')) || [];
-let spells = JSON.parse(localStorage.getItem('spellData')) || [];
-let classData = JSON.parse(localStorage.getItem('classes')) || [];
 
+let spellHistory = JSON.parse(localStorage.getItem('spellHistory')) || [];
 
 
 //form submit handler
@@ -17,10 +15,9 @@ const formSubmitHandler = function (event) {
 
     const searchInputValue = searchInput.value.trim();
     const val = searchInputValue.replace(/\s+/g, '-').toLowerCase();
-    console.log(val);
+    //console.log(val);
     if (val) {
         spellSearch(val);
-        savedSpells();
     } else {
         alert('Please enter a spell name that exists');
     }
@@ -28,11 +25,11 @@ const formSubmitHandler = function (event) {
 //spell history array handler
 const spellHistoryArrayHandler = function (spells) {
     //get the stored spells add new array of spell to spell history
-    let spellHistory = JSON.parse(localStorage.getItem('spells')) || [];
 //added to stored spells
     spellHistory.push(spells[0]);
 //store new spells 
-    localStorage.setItem('spellHistory', JSON.stringify(spellHistory));
+    localStorage.setItem('spells', JSON.stringify(spellHistory));
+    displaySpellHistory();
 }
 
 
@@ -62,7 +59,7 @@ const spellHistoryArrayHandler = function (spells) {
 
 //function to get individual spell from open5e.com
 const spellSearch = function (term) {
-    console.log("searching with", term);
+    //console.log("searching with", term);
     const queryURL = `https://api.open5e.com/v1/spells/?slug__in=${term}&slug__iexact=&slug=&name__iexact=&name=&spell_level=&spell_level__range=&spell_level__gt=&spell_level__gte=&spell_level__lt=&spell_level__lte=&target_range_sort=&target_range_sort__range=&target_range_sort__gt=&target_range_sort__gte=&target_range_sort__lt=&target_range_sort__lte=&school__iexact=&school=&school__in=&duration__iexact=&duration=&duration__in=&requires_concentration=unknown&requires_verbal_components=unknown&requires_somatic_components=unknown&requires_material_components=unknown&casting_time__iexact=&casting_time=&casting_time__in=&dnd_class__iexact=&dnd_class=&dnd_class__in=&dnd_class__icontains=&document__slug__iexact=&document__slug=&document__slug__in=&document__slug__not_in=&level_int=&concentration=&components=&spell_lists_not=`;
 
     fetch(queryURL)
@@ -99,23 +96,14 @@ searchBtn.addEventListener('click', formSubmitHandler);
 
 
 
-
-//saved spells
-const savedSpells = function () {
-    let historyInput = searchInput.value;
-    let spellHistory = JSON.parse(localStorage.getItem('spellHistory')) || [];
-    spellHistory.push(historyInput);
-    localStorage.setItem("spellHistory", JSON.stringify(spellHistory));
-    displaySpellHistory(spellHistory);
-    console.log(spellHistory);
-}
 //display spell to history
-const displaySpellHistory = function (spellHistory) {
+const displaySpellHistory = function () {
     const pastSpellContainer = document.querySelector("#results");
     pastSpellContainer.innerHTML = "";
     spellHistory.forEach(spell => {
+        console.log(spell);
         const spellNameButton = document.createElement("button");
-        spellNameButton.textContent = spell;
+        spellNameButton.textContent = spell.name;
         spellNameButton.setAttribute('class', 'waves-effect waves-light btn-small');
         spellNameButton.classList.add("past");
         pastSpellContainer.appendChild(spellNameButton);
