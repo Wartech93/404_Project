@@ -23,7 +23,7 @@
   <h3 align="center">404_Project</h3>
 
   <p align="center">
-    Brought to you by 2U's Teacher's Assistants Cody Chase and Mary Elenius<br />
+    Brought to you Val Spadoni, Alberto Lawant, Val Spadoni, and Dennis Heit<br />
     <a href="https://github.com/Wartech93/404_Project"><strong>Explore the docs »</strong></a>
     <br />
     <br />
