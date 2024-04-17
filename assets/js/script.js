@@ -24,7 +24,7 @@ const formSubmitHandler = function (event) {
 }
 //spell history array handler
 const spellHistoryArrayHandler = function (spells) {
-    //get the stored spells add new array of spell to spell history
+
 //added to stored spells
     spellHistory.push(spells[0]);
 //store new spells 
@@ -64,24 +64,16 @@ const spellSearch = function (term) {
 
     fetch(queryURL)
         .then(function (response) {
-            if (response.ok) {
-
-
-              
+            if (response.ok) {              
                 return response.json();
-
             } else {
                 alert(`Error: ${response.statusText}`)
                 throw Error('Network response was not ok.');
             }
         })
-        .then(function (spells) {
-           
+        .then(function (spells) {           
             const results = spells.results
-            spellHistoryArrayHandler(results);
-
-           
-           // localStorage.setItem('spellData', JSON.stringify(spells));
+            spellHistoryArrayHandler(results);      
         })
         .catch(function (error) {
             console.error('There was a problem with the fetch operation:', error);
