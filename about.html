@@ -2,56 +2,147 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="assets\css\about.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/about.css">
+
 
     <title>About</title>
 </head>
 
 <body>
-
-    <div class="navbar"> Spell Compendium
-        <img src="./assets/images/logo2.png">
+    <div class="navbar">
+        About
+        <img src="./assets/images/logo2.png" />
         <ul class="nav-items">
-            <li><a href="index.html">Homepage</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a>News</a></li>
-            <li><a>Forum</a></li>
-            <li><a>Shop</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://dnd.wizards.com/news">News</a></li>
+            <li>
+                <a href="https://www.enworld.org/forums/dungeons-dragons.506/">Forum</a>
+            </li>
+            <li><a href="https://dndstore.wizards.com/us/en">Shop</a></li>
         </ul>
     </div>
-<body>
-    <ul>About me
-        <li1>
-            <h1>Alberto</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, beatae. Architecto sit, incidunt sequi
-                ea alias dolorem, ab quaerat impedit blanditiis, obcaecati vitae temporibus sapiente optio labore
-                repellat ullam numquam!LoremLorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, beatae.
-                Architecto sit, incidunt sequi ea alias dolorem, ab quaerat impedit blanditiis, obcaecati vitae
-                temporibus sapiente optio labore repellat ullam numquam!LoremLorem, ipsum dolor sit amet consectetur
-                adipisicing elit. Atque, beatae. Architecto sit, incidunt sequi ea alias dolorem, ab quaerat impedit
-                blanditiis, obcaecati vitae temporibus sapiente optio labore repellat ullam numquam!Lorem</p>
-        </li1>
-        <li2>
-            <h2>Royce</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, beatae. Architecto sit, incidunt sequi
-                ea alias dolorem, ab quaerat impedit blanditiis, obcaecati vitae temporibus sapiente optio labore
-                repellat ullam numquam!Lorem>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, beatae.
-                Architecto sit, incidunt sequi ea alias dolorem, ab quaerat impedit blanditiis, obcaecati vitae
-                temporibus sapiente optio labore repellat ullam numquam!Lorem</p>
 
-        </li2>
-        <li3>
-            <h3>Val</h3>
-            <P> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum recusandae repellat molestiae sequi
-                cumque saepe nisi neque veniam? Eligendi rem doloribus iure quidem, eveniet veniam ab numquam esse
-                excepturi aspernatur.</P>
+    <div id="footer" class="col s12">
+        <a class="carousel-prev"><i class="material-icons medium">chevron_left</i></a>
+        <div class="carousel" id="carousel">
+            <a class="carousel-item" href="#one!">
+                <div class="item-el">
+                    <img class="footer-img" src="./assets/images/dragon.jpg" />
+                    <div class="name-info">
+                        <h1 class="person">VAL</h1>
+                        <button class="btn modal-trigger car-btn" data-target="modal1" data-person="VAL">
+                            <i class="material-icons medium">info</i>
+                        </button>
+                    </div>
+                </div>
+            </a>
 
-        </li3>
-    </ul>
+            <a class="carousel-item" href="#two!">
+                <div class="item-el">
+                    <img class="footer-img" src="./assets/images/dragon.jpg" />
+                    <div class="name-info">
+                        <h1 class="person">ALBERTO</h1>
+                        <button class="btn modal-trigger car-btn" data-target="modal2" data-person="ALBERTO">
+                            <i class="material-icons medium">info</i>
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a class="carousel-item" href="#three!">
+                <div class="item-el">
+                    <img class="footer-img" src="./assets/images/dragon.jpg" />
+                    <div class="name-info">
+                        <h1 class="person">ROYCE</h1>
+                        <button class="btn modal-trigger car-btn" data-target="modal3" data-person="ROYCE">
+                            <i class="material-icons medium">info</i>
+                        </button>
+                    </div>
+                </div>
+            </a>
+            <a class="carousel-item" href="#four!">
+                <div class="item-el">
+                    <img class="footer-img" src="./assets/images/dragon.jpg" />
+                    <div class="name-info">
+                        <h1 class="person">REPOSITORY</h1>
+                        <button class="btn modal-trigger car-btn" data-target="modal4" data-person="REPOSITORY">
+                            <i class="material-icons medium">info</i>
+                        </button>
+                    </div>
+                </div>
+            </a>
+           
+        </div>
+        <a class="carousel-next"><i class="material-icons medium">chevron_right</i></a>
+    </div>
 
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <img class="modal-img" src="" />
+            <h4 class="person-name"></h4>
+            <p>vals about information</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <img class="modal-img" src="" />
+            <h4 class="person-name"></h4>
+            <p> Albertos about information</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <img class="modal-img" src="" />
+            <h4 class="person-name"></h4>
+            <p> royces about information</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <img class="modal-img" src="" />
+            <h4 class="person-name"></h4>
+            <p>link to git hub repository</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">git
+            <img class="modal-img" src="" />
+            <h4 class="person-name"></h4>
+            <p>mitchells about information .</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            Copyright © 1974 - 2024 Dungeons & Dragons<br />
+            <img class="footer-image" src="./assets/images/footer.png" />
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
