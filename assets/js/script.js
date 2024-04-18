@@ -90,7 +90,8 @@ const spellSearch = function (term) {
 //             //create div for card       
         let spellElement = document.querySelector('#class-info');
         const spellCard = document.createElement('div');
-         spellCard.setAttribute('class', ('card-panel'));
+         spellCard.setAttribute('class', ('card-panel col s4'));
+         spellCard.setAttribute('id', ('card-style'));        
          const spellName = document.createElement('h3');
          const spellRange = document.createElement('p');
          const spellComps = document.createElement('p');
@@ -143,6 +144,4 @@ searchBtn.addEventListener('click', formSubmitHandler);
 const clearDiv = function () {
     searchInput.value.innerHTML = '';
 }
-
-
 
