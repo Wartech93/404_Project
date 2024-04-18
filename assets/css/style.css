@@ -140,7 +140,7 @@ img {
 
     display: flex;
     justify-content: start;
-    width: 400px;
+    width: 300px;
     position: absolute;
     left: 0;
     margin-left: 30px;
@@ -164,7 +164,7 @@ img {
 
 li {
 
-    font-size: 30px;
+    font-size: 20px;
     display: inline;
     display: block;
     color: white;
