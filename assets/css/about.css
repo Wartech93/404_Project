@@ -1,4 +1,4 @@
-.item-el {
+ .item-el {
     display: flex;
     flex-direction:column;
 }
@@ -6,10 +6,13 @@
     position: unset;
     margin-left: 0;
 }
+.car-style {
+    margin-left: 43%;
+} 
 #carousel {
     height: 35vw !important;
-    margin-left: 2.5%;
-}
+    margin-left: 25%;
+} 
 #footer {
     display: flex;
     align-items: center;
@@ -28,4 +31,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
+}
+
+.active {
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.79);
+}
+
+.active .item-el {
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.79);;
 }
