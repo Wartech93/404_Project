@@ -24,12 +24,12 @@ h2 {
     border: 5px red solid;
     height: 850px;    
     background-color: black;
-    opacity: 80%;
-}
+    opacity: 80%;}
+
 
 button {   
     color: black;
-    border: 1px solid rgb(0, 0, 0);   
+    border: 1px solid rgb(0, 0, 0);
     font-family: fantasy, sans-serif;
     font-size: 20px;
 }
@@ -43,14 +43,14 @@ input {
     margin-top: 10px;
 }
 
- .column-search {
+.column-search {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     height: 1000px; }  
 
-#column-classes {   
+#column-classes {
     height: 1000px;
     margin-right: 200px;
 }
@@ -129,7 +129,7 @@ img {
     display: flex;
     align-items: end;
     position: absolute;
-    right: 0;       
+    right: 0;
 }
 
 li {
@@ -183,7 +183,8 @@ li a:hover {
 #results {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;   
+    margin-top: 40px;
+  
 }
 label {
     font-size: 30px;
