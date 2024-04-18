@@ -4,40 +4,32 @@
     color: gold;
     background-color: black;
     opacity: 80%;
-    padding: 40px;
-    font-size: 100px;
+    padding: 20px;
+    font-size: 70px;
     font-family: fantasy, sans-serif;
     border: 5px solid red;
     margin-bottom: 40px;
-    margin-right: 25px;
 }
 
 h2 {
-
     font-size: 40px;
     color: gold;
     margin-left: 40px;
     font-family: fantasy;
 }
 
-.column-left {
-
+#column-left {
     display: flex;
     flex-direction: row;
     border: 5px red solid;
-    margin-right: 2180px;
+    height: 850px;    
     background-color: black;
-    opacity: 80%;
-}
+    opacity: 80%;}
 
-button {
 
-    width: 200px;
-    height: 50px;
+button {   
     color: black;
     border: 1px solid rgb(0, 0, 0);
-    margin-left: 80px;
-    margin-top: 30px;
     font-family: fantasy, sans-serif;
     font-size: 20px;
 }
@@ -56,21 +48,14 @@ input {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    height: 1000px;
+    height: 1000px; }  
 
-}
-
-.column-classes {
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
+#column-classes {
     height: 1000px;
     margin-right: 200px;
 }
 
-.column-middle {
+.column-center {
     display: flex;
     flex-direction: column;
     border-style: solid;
@@ -79,48 +64,35 @@ input {
     color: red;
 }
 
-
 .spellContainer {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-
-
-.column-right {
+#column-right {
     display: flex;
     position: absolute;
+    height: 850px;
     right: 0px;
     border: 5px red solid;
     background-color: black;
     opacity: 80%;
-    margin-top: -1000px;
-    margin-right: 20px;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
     background: url('../images/dragon.jpg');
     background-size: cover;
+    overflow-x: hidden;
 }
 
-
-.container {
-    height: 200px;
+#center-box {
+    height: 850px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: black;
     border: 5px solid red;
-    height: 990px;
-    width: 1500px;
-    margin-left: 20%;
-    margin-top: -1000px;
     opacity: 80%;
-
 }
 
 footer {
@@ -131,17 +103,15 @@ footer {
     font-size: 20px;
     font-family: fantasy, sans-serif;
     color: white;
-    padding-top: 50px;
-    margin-left: -25px;
-    margin-top: -50px;
     border: 2px solid red;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 img {
-
     display: flex;
     justify-content: start;
-    width: 400px;
+    width: 250px;
     position: absolute;
     left: 0;
     margin-left: 30px;
@@ -160,25 +130,71 @@ img {
     align-items: end;
     position: absolute;
     right: 0;
-    margin-right: 50px;
 }
 
 li {
-
-    font-size: 30px;
+    font-size: 25px;
     display: inline;
     display: block;
     color: white;
     text-align: end;
-    padding: 0 16px;
     text-decoration: none;
-    padding-left: 50px;
+    margin-right: 20px;
+    padding-left: 40px;
 }
 
 li a:hover {
     background-color: rgb(156, 2, 2);
 }
 
-body {
-    overflow-x: hidden;
+#search {
+    align-items: center;
+}
+
+#classes-button {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-left: 50px;
+}
+
+#class-info {
+    padding: 1%;
+    overflow-y: scroll;    
+}
+
+.btn-margin {
+    justify-content: space-around;
+    display: flex;    
+    height: 30px;
+    width: 150px;
+    margin-top: 10px;
+    padding-top: 5px;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+#card-style {
+    max-height: 450px;
+    overflow-y: scroll;  
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  
+}
+label {
+    font-size: 30px;
+    color: rgb(227, 193, 2);
+    font-family: fantasy, sans-serif;
+}
+
+#search-name {
+    margin-left: 10%;
+}
+.search-wrapper {
+    margin-right:11%;     
 }

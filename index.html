@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    
     <title>Spell Compendium</title>
-</head>
-
+  </head>
 <body>
-
     <div class="navbar"> Spell Compendium
         <img src="./assets/images/logo2.png">
         <ul class="nav-items">
-            <li><a href="./about.html">about</a></li>
-            <li><a>News</a></li>
-            <li><a>Forum</a></li>
-            <li><a>Shop</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="https://dnd.wizards.com/news">News</a></li>
+            <li><a href="https://www.enworld.org/forums/dungeons-dragons.506/">Forum</a></li>
+            <li><a href="https://dndstore.wizards.com/us/en">Shop</a></li>
         </ul>
     </div>
-
-
-
-    <section class="column-left">
-        <div class="column-search">
-            <h2>Search Spell: </h2>
-            <div class="search-wrapper">
-                <input type="text" id="search" placeholder="Search Spell"><br>
-                <button for="search" onclick="formSubmitHandler()">Search </button>
+    <section class="row">
+        <div class="col s2" id="column-left">
+            <div class="column-search">
+                <form>
+                    <label for="search-name" class="center-align gold-text">Search Spell:</label>
+                    <input class="white-text" type="text" id="search-name" placeholder="Ex: Fireball"><br>
+                </form>
+                <button class="btn waves-effect waves-light red darken-2" type="submit" name="action"
+                    id="search-button">Submit
+                    <i class="material-icons right"></i>
+                </button>
                 <div id="results"></div>
             </div>
         </div>
-    </section>
-
-    <section class="column-right">
-        <div class="column-classes">
-            <h2>Classes:</h2>
-            <div class="search-wrapper">
+        </div>
+        <div class="col s8" id="center-box">
+            <div class="item row" id="class-info"></div>
+        </div>
+        <div class="col s2" id="column-right">
+            <div id="column-classes">
+                <h2>Classes:</h2>
             </div>
         </div>
+        <div class="row" id="classes-button">
+            <div class="col s12 m4">     
+                </div>
+            <div class="col s0">
+                <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="bard">Bard</button>
+                <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="cleric">Cleric</button>
+                <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="druid">Druid</button>
+            </div>
+            <div class="col s0">
+                <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="sorcerer">Sorcerer</button>
+                <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="warlock">Warlock</button>
+                <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="wizard">Wizard</button>
+            </div>
+            <div class="search-wrapper"></div>
+        </div>
+        </div>
     </section>
-
-    <div class="container">
-        <div class="item"></div>
-    </div>
-
     <footer>
         <p>Copyright © 1974 - 2024 Dungeons & Dragons<br>
             <img class="footer-image" src="./assets/images/footer.png">
-
     </footer>
-
-
-
-
-
-
-
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/5ebits.js"></script>
 </body>
-
 </html>
