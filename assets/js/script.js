@@ -144,3 +144,5 @@ const clearDiv = function () {
     searchInput.value.innerHTML = '';
 }
 
+
+
