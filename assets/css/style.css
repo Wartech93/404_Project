@@ -53,15 +53,16 @@ input {
     margin-top: 10px;
 }
 
-.column-search {
+ .column-search {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* align-items: flex-start; */
-    height: 1000px;
 
+    align-items: flex-start;
+    height: 1000px; }
+    
+    
 
-}
 
 #column-classes {
 
@@ -73,7 +74,7 @@ input {
     margin-right: 200px;
 }
 
-.column-middle {
+.column-center {
     display: flex;
     flex-direction: column;
     border-style: solid;
