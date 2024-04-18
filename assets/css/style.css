@@ -9,12 +9,9 @@
     font-family: fantasy, sans-serif;
     border: 5px solid red;
     margin-bottom: 40px;
-
 }
 
-
 h2 {
-
     font-size: 40px;
     color: gold;
     margin-left: 40px;
@@ -22,17 +19,15 @@ h2 {
 }
 
 #column-left {
-
     display: flex;
     flex-direction: row;
     border: 5px red solid;
-    height: 850px;
+    height: 850px;    
     background-color: black;
-    opacity: 80%;
-}
+    opacity: 80%;}
 
-button {
 
+button {   
     color: black;
     border: 1px solid rgb(0, 0, 0);
     font-family: fantasy, sans-serif;
@@ -52,16 +47,10 @@ input {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
     align-items: flex-start;
-    height: 1000px;
-}
-
-
-
+    height: 1000px; }  
 
 #column-classes {
-
     height: 1000px;
     margin-right: 200px;
 }
@@ -75,9 +64,7 @@ input {
     color: red;
 }
 
-
 .spellContainer {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -94,12 +81,10 @@ input {
 }
 
 body {
-
     background: url('../images/dragon.jpg');
     background-size: cover;
     overflow-x: hidden;
 }
-
 
 #center-box {
     height: 850px;
@@ -108,7 +93,6 @@ body {
     background-color: black;
     border: 5px solid red;
     opacity: 80%;
-
 }
 
 footer {
@@ -125,7 +109,6 @@ footer {
 }
 
 img {
-
     display: flex;
     justify-content: start;
     width: 250px;
@@ -147,11 +130,9 @@ img {
     align-items: end;
     position: absolute;
     right: 0;
-
 }
 
 li {
-
     font-size: 25px;
     display: inline;
     display: block;
@@ -167,62 +148,50 @@ li a:hover {
 }
 
 #search {
-
     align-items: center;
 }
 
 #classes-button {
-
     display: flex;
     position: relative;
     flex-direction: column;
     padding-top: 80px;
     padding-left: 50px;
-
 }
 
 #class-info {
     padding: 1%;
-    overflow-y: scroll;
+    overflow-y: scroll;    
 }
 
-
 .btn-margin {
-
-    display: flex;
     justify-content: space-around;
+    display: flex;    
     height: 30px;
     width: 150px;
     margin-top: 10px;
     padding-top: 5px;
     border: 2px solid white;
     border-radius: 2px;
-
 }
 
 #card-style {
-
     max-height: 450px;
-    overflow-y: scroll;
-
+    overflow-y: scroll;  
 }
 
 #results {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-
+  
 }
-
 label {
-
     font-size: 30px;
     color: rgb(227, 193, 2);
-    font-family: fantasy;
-    
+    font-family: fantasy, sans-serif;
 }
 
 #search-name {
-
     margin-left: 10%;
 }
