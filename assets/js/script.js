@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
 //form submit handler
 const formSubmitHandler = function (event) {
         event.preventDefault();
-
     const searchInputValue = searchInput.value.trim();
     const val = searchInputValue.replace(/\s+/g, '-').toLowerCase();
-
     if (val) {
         spellSearch(val);
     } else {
@@ -22,7 +20,6 @@ const formSubmitHandler = function (event) {
 const clearDiv = function () {
     searchInput.value.innerHTML = "";
 }
-
 //spell history array handler
 const spellHistoryArrayHandler = function (spells) {
     const spellToAdd = spells[0];
@@ -51,8 +48,7 @@ const displaySpellHistory = function () {
         pastSpellContainer.appendChild(spellNameButton);
         spellNameButton.addEventListener('click', (event) => {
             event.preventDefault();                    
-            displaySpells(spell);
-                    
+            displaySpells(spell);                    
         })
     })
 }
@@ -93,7 +89,7 @@ const spellSearch = function (term) {
 //             //create div for card       
         let spellElement = document.querySelector('#class-info');
         const spellCard = document.createElement('div');       
-         spellCard.setAttribute('class', ('card-panel col s4'));
+         spellCard.setAttribute('class', ('card-panel col s4 grey lighten-4'));
          spellCard.setAttribute('id', ('card-style'));    
          const spellName = document.createElement('h3');
          const spellRange = document.createElement('p');
