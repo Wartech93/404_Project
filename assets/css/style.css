@@ -4,13 +4,14 @@
     color: gold;
     background-color: black;
     opacity: 80%;
-    padding: 40px;
-    font-size: 100px;
+    padding: 20px;
+    font-size: 70px;
     font-family: fantasy, sans-serif;
     border: 5px solid red;
     margin-bottom: 40px;
 
 }
+
 
 h2 {
 
@@ -61,14 +62,6 @@ input {
     height: 1000px; }
     
     
-
-
-
-    /* align-items: flex-start; */
-    height: 1000px;
-
-
-}
 
 
 #column-classes {
@@ -149,7 +142,7 @@ img {
 
     display: flex;
     justify-content: start;
-    width: 400px;
+    width: 250px;
     position: absolute;
     left: 0;
     margin-left: 30px;
@@ -169,16 +162,16 @@ img {
     position: absolute;
     right: 0;
     margin-right: 50px;
+    
 }
 
 li {
 
-    font-size: 30px;
+    font-size: 25px;
     display: inline;
     display: block;
     color: white;
     text-align: end;
-    padding: 0 16px;
     text-decoration: none;
     padding-left: 50px;
 }
@@ -197,24 +190,38 @@ li a:hover {
     display: flex;
     position: relative;
     padding-top: 150px;
-    padding-right: 200px;
+    padding-right: 100px;
 
 
 }
 
-/* .row .sol.s1 {
+#class-info {
+    padding: 1%;
+    overflow-y: scroll;
+    
+}
 
-    width: 70%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-} */
 
-#btn-margin {
+.btn-margin {
 
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     height: 30px;
     width: 90px;
+    margin-top: 10px;
+    padding-top: 5px;
 
+}
+
+#card-style {
+
+    max-height: 450px;
+    overflow-y: scroll;
+    /* margin-right: 1%; */
+}
+
+#results {
+
+    margin-top: 40px;
+   
 }
