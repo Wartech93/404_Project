@@ -46,7 +46,7 @@ const displaySpellHistory = function () {
         console.log(spell);        
         const spellNameButton = document.createElement("button");       
         spellNameButton.textContent = spell.name;  
-        spellNameButton.setAttribute('class', 'waves-effect waves-light btn-small');
+        spellNameButton.setAttribute('class', 'btn-medium-margin waves-effect white text waves-light red darken-2');
         spellNameButton.classList.add('past');
         pastSpellContainer.appendChild(spellNameButton);
         spellNameButton.addEventListener('click', (event) => {
