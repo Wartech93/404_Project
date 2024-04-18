@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 }); 
 //form submit handler
 const formSubmitHandler = function (event) {
-    event.preventDefault();
+        event.preventDefault();
 
     const searchInputValue = searchInput.value.trim();
     const val = searchInputValue.replace(/\s+/g, '-').toLowerCase();
