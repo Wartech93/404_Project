@@ -182,3 +182,32 @@ li a:hover {
 body {
     overflow-x: hidden;
 }
+
+.person {
+    margin-top: 5%;
+    color: gold;
+    /*background:url(https://img.freepik.com/free-photo/dragons-fantasy-artificial-intelligence-image_23-2150400884.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713362400&semt=sph);*/
+    text-align: center;
+}
+#carousel {
+    height: inherit;
+}
+
+.footer-img {
+    display: block;
+    position: unset;
+    margin-left: unset;
+}
+
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+.item-el {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
