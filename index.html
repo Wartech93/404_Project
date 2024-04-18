@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-
     <title>Spell Compendium</title>
-</head>
-
+  </head>
 <body>
-
     <div class="navbar"> Spell Compendium
         <img src="./assets/images/logo2.png">
         <ul class="nav-items">
@@ -33,20 +30,17 @@
                         id="search-button">Submit
                         <i class="material-icons right"></i>
                     </button>
-
                     <div id="results"></div>
                 </div>
-            </div>
+           </div>
         </div>
-
+        </div>
         <div class="col s8" id="center-box">
             <div class="item row" id="class-info"></div>
         </div>
-        
-            <div class="col s2" id="column-right">
-                <div id="column-classes">
-                    <h2>Classes:</h2>
-                </div>
+        <div class="col s2" id="column-right">
+            <div id="column-classes">
+                <h2>Classes:</h2>
             </div>
             <div class="row" id="classes-button">
                 <div class="col s0">
@@ -54,28 +48,33 @@
                     <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="cleric">Cleric</button>
                     <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="druid">Druid</button>
                 </div>
-
                 <div class="col s0">
                     <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="sorcerer">Sorcerer</button>
                     <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="warlock">Warlock</button>
                     <button class="btn-margin red darken-2 white-text" type="submit" name="action" data-value="wizard">Wizard</button>
                 </div>
-
-
             </div>
-            <div class="search-wrapper">
+            <div class="col s12 m4">
+                <button class="btn-margin red darken-2 white-text" type="submit" data-value="monk">Monk</button>
+                <button class="btn-margin red darken-2 white-text" type="submit" data-value="paladin">Paladin</button>
+                <button class="btn-margin red darken-2 white-text" type="submit" data-value="ranger">Ranger</button>
             </div>
+            <div class="col s12 m4">
+                <button class="btn-margin red darken-2 white-text" type="submit" data-value="sorcerer">Sorcerer</button>
+                <button class="btn-margin red darken-2 white-text" type="submit" data-value="warlock">Warlock</button>
+                <button class="btn-margin red darken-2 white-text" type="submit" data-value="wizard">Wizard</button>
+            </div>
+            <div class="search-wrapper"></div>
+        </div>
+        </div>
     </section>
-
     <footer>
         <p>Copyright © 1974 - 2024 Dungeons & Dragons<br>
             <img class="footer-image" src="./assets/images/footer.png">
-
     </footer>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/5ebits.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 }); 
 //form submit handler
 const formSubmitHandler = function (event) {
-    event.preventDefault();
+        event.preventDefault();
 
     const searchInputValue = searchInput.value.trim();
     const val = searchInputValue.replace(/\s+/g, '-').toLowerCase();
@@ -19,6 +19,10 @@ const formSubmitHandler = function (event) {
         alert('Please enter a spell name that exists');
     }
 }
+const clearDiv = function () {
+    searchInput.value.innerHTML = "";
+}
+
 //spell history array handler
 const spellHistoryArrayHandler = function (spells) {
     const spellToAdd = spells[0];
@@ -32,7 +36,7 @@ const spellHistoryArrayHandler = function (spells) {
         console.log("Spell already exists in history");
         // Optionally, you can notify the user that the spell already exists
         // You can add your notification logic here
-    }
+    }   
 }
 //display spell history
 const displaySpellHistory = function () {
@@ -42,14 +46,13 @@ const displaySpellHistory = function () {
         console.log(spell);        
         const spellNameButton = document.createElement("button");       
         spellNameButton.textContent = spell.name;  
-        spellNameButton.setAttribute('class', 'waves-effect waves-light btn-small');
+        spellNameButton.setAttribute('class', 'btn-medium-margin waves-effect white text waves-light red darken-2');
         spellNameButton.classList.add('past');
         pastSpellContainer.appendChild(spellNameButton);
-
         spellNameButton.addEventListener('click', (event) => {
-            event.preventDefault(); 
-                   
+            event.preventDefault();                    
             displaySpells(spell);
+                    
         })
     })
 }
@@ -89,9 +92,9 @@ const spellSearch = function (term) {
      console.log(spellArray);
 //             //create div for card       
         let spellElement = document.querySelector('#class-info');
-        const spellCard = document.createElement('div');
+        const spellCard = document.createElement('div');       
          spellCard.setAttribute('class', ('card-panel col s4'));
-         spellCard.setAttribute('id', ('card-style'));        
+         spellCard.setAttribute('id', ('card-style'));    
          const spellName = document.createElement('h3');
          const spellRange = document.createElement('p');
          const spellComps = document.createElement('p');
@@ -139,9 +142,6 @@ const spellSearch = function (term) {
         console.log(spellElement);        
  }
 //event listener for search button
-searchBtn.addEventListener('click', formSubmitHandler);
+searchBtn.addEventListener('click', formSubmitHandler, clearDiv);
 //function to delete cards in spell list area
-const clearDiv = function () {
-    searchInput.value.innerHTML = '';
-}
 
