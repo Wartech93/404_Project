@@ -34,7 +34,7 @@ const displayClassInfo = function (classArray, data) {
     classElement.innerHTML="";
     const classCard = document.createElement('div');
     //set attributes for class info card
-    classCard.setAttribute('class', ('card-panel s1'));
+    classCard.setAttribute('class', ('card-panel s1 '));
     classCard.setAttribute('id', ('class-card-style'));
     //create elements for title and spell casting description
     const className = document.createElement('h3');
