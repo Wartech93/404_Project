@@ -17,8 +17,8 @@ const formSubmitHandler = function (event) {
         alert('Please enter a spell name that exists');
     }
 }
-const clearDiv = function () {
-    searchInput.value.innerHTML = "";
+function clearDiv() {
+   document.querySelector('#search-input').textContent = '';
 }
 //spell history array handler
 const spellHistoryArrayHandler = function (spells) {

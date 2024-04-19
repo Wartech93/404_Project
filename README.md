@@ -1,4 +1,4 @@
-# 404_Project
+# Spell Compendium 5e
 <div align="center">
 
   <!-- Add badges using the following format: -->
@@ -17,18 +17,18 @@
 
 <div align="center">
   <a href="https://github.com/Wartech93/404_Project">
-    <img src="./assets/images/logo-main.svg" alt="Logo" width="80" height="80">
+    <img src="./assets/images/DnD D20.png" alt="Logo" width="300" height="160">
   </a>
 
   <h3 align="center">404_Project</h3>
 
   <p align="center">
-    Brought to you Val Spadoni, Alberto Lawant, Val Spadoni, and Dennis Heit<br />
+    Brought to you Val Spadoni, Alberto Lawant, and Royce Atkins<br />
     <a href="https://github.com/Wartech93/404_Project"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <!-- TODO- add deployed link -->
-    <a href="https://github.com/Wartech93/404_Project">View Demo(Coming Soon)</a>
+    <a href="https://github.com/Wartech93/404_Project">View Demo</a>
     ·
     <a href="https://github.com/Wartech93/404_Project/issues">Report Bug</a>
     ·
@@ -66,11 +66,8 @@
 
 ## About The Project
 
-<!-- Add screenshots using the following format: -->
-<!-- ![Screenshot alt description](directPathOfScreenshots) -->
-
-This project was built with vanilla JS/CSS/HTML with the help of APIs in order to show our students an example project.
-It's currently not deployed until the prototype MVP is completed.
+This project was built with JS/CSS/HTML and Materialize with the help of APIs in order to show our students an example project.
+We created an application that allows you to have all your spells for your favorite class at your fingertips. It also allows you to see spell casting information for any spell casting class available.
 
 ### Built With
 
@@ -94,7 +91,7 @@ It's currently not deployed until the prototype MVP is completed.
 
 ## Getting Started
 
-Once completely built, this application will function as a deployed app on Github Pages
+Once completely built, this application will function as a deployed app on Github Pages.
 
 ### Local Installation / Testing
 
@@ -110,13 +107,14 @@ git clone https://github.com/Wartech93/404_Project.git
 
 ## Usage
 
-Once the app is functional, screenshots will be added in this section.
+![Screenshot1](./assets/images/screenshot1.png)
+![Screenshot2](./assets/images/screenshot2.png)
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-<!-- TODO: Build Roadmap with Cody's Github issues -->
+
 
 #### MVP
 
@@ -126,8 +124,8 @@ Once the app is functional, screenshots will be added in this section.
 
 #### Future Development
 
-- [ ] Feature
-- [ ] Feature
+- [ ] Add delete buttons to spell cards
+- [ ] Clear Search Box after submit
 - [ ] Feature
 
 See the [open issues](https://github.com/Wartech93/404_Project/issues) for a full list of proposed features (and known issues).
@@ -157,28 +155,30 @@ See LICENSE.txt for more information.
 
 <!-- CONTACT -->
 
-## Contact
+## Collaborator Git Hubs
 
-[Mary Elenius](https://maryelenius.com/d20) - mary.panda.jackson@gmail.com
+[Alberto Lawant](https://github.com/ParryProgramming)
 
-<!-- TODO- add cody's email if he wants -->
 
-[Cody Chase](https://github.com/Wartech93) - [TODO- cody's email will go here]
+[Royce Atkins](https://github.com/Wartech93) 
+
+
+[Val Spadoni](https://github.com/oooWeeee)
 
 Project Links:
 
 <!-- TODO- add FIGMA board -->
 
-[Figma Board- link later]()
+[Figma Board- link later](https://www.figma.com/file/MmUIY63mzXYa0i2OFtfrSB/Spell-Compendium-Wireframe?type=design&node-id=0-1&mode=design&t=RnTcg3nMZ37HrWH7-0)
 
 [Github Repository](https://github.com/Wartech93/404_Project)
 
 <!-- TODO- add deployment link -->
 
-[Deployment- link later]()
+[Deployment](https://wartech93.github.io/404_Project/)
 
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
-Mary would like to give a big shoutout to my partner in crime and daughter, Yennefer! Every day she proves she is small yet mighty! She would also like to thank all of her students in the Spring 2024 UCF Full Stack Bootcamp for being a fantastic cohort!
+We would like to give a shoutout to the TAs Mary and Cody as well as John for helping us fix all of our issues and making our page look awesome! Also for our class mates that spent the time to work with us and make this such a fun project!

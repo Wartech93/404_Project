@@ -1,4 +1,4 @@
- .item-el {
+.item-el {
     display: flex;
     flex-direction:column;
 }
@@ -11,7 +11,8 @@
 } 
 #carousel {
     height: 35vw !important;
-    margin-left: 25%;
+    margin-left: 37%;
+    margin-top: 8%;
 } 
 #footer {
     display: flex;
@@ -31,7 +32,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-   
+
 }
 
 .active {
@@ -42,4 +43,7 @@
 .active .item-el {
     width: fit-content;
     background-color: rgba(0, 0, 0, 0.79);;
+}
+.crsr:hover {
+    cursor: pointer;
 }
