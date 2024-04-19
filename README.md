@@ -78,12 +78,12 @@ We created an application that allows you to have all your spells for your favor
 [![CSS](https://img.shields.io/badge/Language-CSS-ffff00?style=plastic&logo=HTML5&logoWidth=10)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Materialize](https://img.shields.io/badge/Framework-Materialize-80ff00?style=plastic&logo=jQuery&logoWidth=10)](https://materializecss.com/)
 [![VS Code](https://img.shields.io/badge/IDE-VSCode-0000ff?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://code.visualstudio.com/docs)
-![Static Badge](https://img.shields.io/badge/https%3A%2F%2F5e-bits.github.io%2Fdocs%2Fimg%2Ffavicon.ico?style=plastic&logo=https%3A%2F%2F5e-bits.github.io%2Fdocs%2Fimg%2Ffavicon.ico)
 
 
+## APIs used
+![Open5e](https://open5e.com/api-docs)
 
-
-[![5eBits](https://5e-bits.github.io/docs/)]
+![5eBits](https://5e-bits.github.io/docs/)
 
 </div>
 
