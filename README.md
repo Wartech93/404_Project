@@ -81,9 +81,9 @@ We created an application that allows you to have all your spells for your favor
 
 
 ## APIs used
-![Open5e](https://open5e.com/api-docs)
+![Open5e](./assets/images/DnD icon.png)(https://open5e.com/api-docs)
 
-![5eBits](https://5e-bits.github.io/docs/)
+![5eBits](./assets/images/DnD icon.png)(https://5e-bits.github.io/docs/)
 
 </div>
 
