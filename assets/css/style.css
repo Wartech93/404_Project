@@ -15,7 +15,7 @@ h2 {
     font-size: 40px;
     color: gold;
     margin-left: 40px;
-    font-family: fantasy;
+    font-family: fantasy, sans-serif;
 }
 
 #column-left {
@@ -174,10 +174,21 @@ li a:hover {
     border: 2px solid white;
     border-radius: 2px;
 }
+.btn-margin:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffee10;
+}
+
 
 #card-style {
     max-height: 450px;
     overflow-y: scroll;  
+}
+#card-style:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffee10;
 }
 
 #results {
@@ -197,4 +208,9 @@ label {
 }
 .search-wrapper {
     margin-right:11%;     
+}
+#search-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffee10;
 }
